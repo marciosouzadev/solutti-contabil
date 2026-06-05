@@ -109,4 +109,88 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // 8. Calendário Fiscal Dinâmico
+    const obrigacoesFiscais = [
+        {
+            nome: "Folha de Pagamento",
+            publico: "Todas as Empresas",
+            categoria: "dp",
+            descricao: "Pagamento do salário mensal dos colaboradores.",
+            vencimento: "Até o 5º dia útil",
+            status: "Atenção",
+            badgeClass: "warning"
+        },
+        {
+            nome: "DAS MEI",
+            publico: "MEI",
+            categoria: "mei",
+            descricao: "Guia de recolhimento do Microempreendedor Individual.",
+            vencimento: "Dia 20",
+            status: "Próximo Vencimento",
+            badgeClass: "info"
+        },
+        {
+            nome: "Simples Nacional (DAS)",
+            publico: "Microempresa (ME) e EPP",
+            categoria: "simples",
+            descricao: "Imposto unificado do Simples Nacional.",
+            vencimento: "Dia 20",
+            status: "Em Dia",
+            badgeClass: "success"
+        },
+        {
+            nome: "FGTS / eSocial",
+            publico: "Empregadores",
+            categoria: "dp",
+            descricao: "Recolhimento do Fundo de Garantia e informações.",
+            vencimento: "Dia 20",
+            status: "Próximo Vencimento",
+            badgeClass: "info"
+        },
+        {
+            nome: "DCTFWeb / INSS",
+            publico: "Empresas em Geral",
+            categoria: "fiscal",
+            descricao: "Declaração e recolhimento de contribuições previdenciárias.",
+            vencimento: "Dia 15",
+            status: "Vence Hoje",
+            badgeClass: "danger"
+        }
+    ];
+
+    const tabelaCorpo = document.getElementById('calendario-tbody');
+    const btnFiltros = document.querySelectorAll('.filter-btn');
+
+    if (tabelaCorpo) {
+        function renderizarTabela(filtro = 'todos') {
+            tabelaCorpo.innerHTML = '';
+            
+            const filtradas = obrigacoesFiscais.filter(item => filtro === 'todos' || item.categoria === filtro);
+            
+            filtradas.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><strong>${item.nome}</strong></td>
+                    <td>${item.publico}</td>
+                    <td>${item.descricao}</td>
+                    <td><strong>${item.vencimento}</strong></td>
+                    <td><span class="badge badge-${item.badgeClass}">${item.status}</span></td>
+                `;
+                tabelaCorpo.appendChild(tr);
+            });
+        }
+
+        // Render inicial
+        renderizarTabela();
+
+        // Ação de Filtrar
+        btnFiltros.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                btnFiltros.forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                renderizarTabela(e.target.getAttribute('data-filter'));
+            });
+        });
+    }
 });

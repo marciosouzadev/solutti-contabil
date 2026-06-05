@@ -48,6 +48,7 @@
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#ferramentas">Ferramentas</a></li>
+                    <li><a href="#calendario">Calendário</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
@@ -222,6 +223,75 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendário Fiscal -->
+    <section id="calendario" class="section">
+        <div class="container">
+            <div class="section-header reveal fade-up">
+                <span class="subtitle">Organização e Prazos</span>
+                <h2>Calendário Fiscal e Trabalhista</h2>
+                <p>Acompanhe os principais vencimentos fiscais e obrigações tributárias do mês. Manter a contabilidade empresarial em dia é essencial para o crescimento sustentável da sua empresa.</p>
+            </div>
+
+            <div class="fiscal-alert reveal fade-up">
+                <i class="ph-fill ph-warning-circle"></i>
+                <div>
+                    <strong>Evite multas e juros!</strong> 
+                    Mantenha-se atento ao cronograma de impostos e obrigações.
+                </div>
+            </div>
+
+            <div class="calendar-highlights reveal fade-up delay-1">
+                <div class="cal-card">
+                    <div class="cal-icon danger"><i class="ph ph-calendar-x"></i></div>
+                    <h4>Próxima Obrigação</h4>
+                    <p>Folha de Pagamento</p>
+                    <span>5º dia útil</span>
+                </div>
+                <div class="cal-card">
+                    <div class="cal-icon warning"><i class="ph ph-file-text"></i></div>
+                    <h4>Área Fiscal</h4>
+                    <p>Simples Nacional / MEI</p>
+                    <span>Vence dia 20</span>
+                </div>
+                <div class="cal-card">
+                    <div class="cal-icon success"><i class="ph ph-shield-check"></i></div>
+                    <h4>Sua Empresa</h4>
+                    <p>Mantenha-se regularizado</p>
+                    <span>Fale com o Contador</span>
+                </div>
+            </div>
+
+            <div class="calendar-wrapper reveal fade-up delay-2">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="mei">MEI</button>
+                    <button class="filter-btn" data-filter="simples">Simples Nacional</button>
+                    <button class="filter-btn" data-filter="dp">Departamento Pessoal</button>
+                    <button class="filter-btn" data-filter="fiscal">Fiscal</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="fiscal-table">
+                        <thead>
+                            <tr>
+                                <th>Obrigação</th>
+                                <th>Público-Alvo</th>
+                                <th>Descrição</th>
+                                <th>Data de Vencimento</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="calendario-tbody">
+                            <!-- Renderizado via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="legal-disclaimer">
+                    <p><strong>Aviso Legal:</strong> As datas de vencimento listadas são referencias gerais e podem sofrer alterações por legislações supervenientes, prorrogações governamentais ou em caso de feriados/finais de semana (onde geralmente antecipa-se ou prorroga-se o prazo). Consulte sempre os órgãos competentes ou a equipe da Solutti Contábil para confirmação exata da sua guia.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -419,7 +489,7 @@
                 <div class="contact-form-wrapper reveal fade-right">
                     <h2>Fale com Especialistas</h2>
                     <p>Preencha o formulário abaixo e retornaremos em breve.</p>
-                    <form class="contact-form" action="https://formsubmit.co/marciosouzadev06@gmail.com" method="POST">
+                    <form class="contact-form" action="https://formsubmit.co/joice@solutticontabil.com.br" method="POST">
                         <input type="hidden" name="_subject" value="Novo Contato - Site Solutti">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="text" name="Nome" placeholder="Nome completo" required>
