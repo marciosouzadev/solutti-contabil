@@ -419,11 +419,13 @@
                 <div class="contact-form-wrapper reveal fade-right">
                     <h2>Fale com Especialistas</h2>
                     <p>Preencha o formulário abaixo e retornaremos em breve.</p>
-                    <form class="contact-form" onsubmit="event.preventDefault();">
-                        <input type="text" placeholder="Nome completo" required>
-                        <input type="tel" placeholder="Telefone / WhatsApp" required>
-                        <input type="email" placeholder="E-mail profissional" required>
-                        <textarea rows="4" placeholder="Como podemos ajudar sua empresa?" required></textarea>
+                    <form class="contact-form" action="https://formsubmit.co/marciosouzadev06@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Novo Contato - Site Solutti">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="Nome" placeholder="Nome completo" required>
+                        <input type="tel" name="Telefone" placeholder="Telefone / WhatsApp" required>
+                        <input type="email" name="Email" placeholder="E-mail profissional" required>
+                        <textarea name="Mensagem" rows="4" placeholder="Como podemos ajudar sua empresa?" required></textarea>
                         <button type="submit" class="btn btn-primary">Solicitar Atendimento</button>
                     </form>
                 </div>
@@ -472,7 +474,7 @@
             <div class="container">
                 <p>&copy; 2026 Solutti Contábil. Todos os direitos reservados.</p>
                 <p class="developer-credit">
-                    Desenvolvido por <a href="https://wa.me/5547997707872" target="_blank">Marcio Souza Dev</a> | Desenvolvimento Web
+                    Desenvolvido por <a href="https://wa.me/5547997707872" target="_blank">MJS Dev</a> | Desenvolvimento Web
                 </p>
             </div>
         </div>
