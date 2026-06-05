@@ -669,6 +669,22 @@ footer {
     font-size: 0.9rem;
 }
 
+.developer-credit {
+    font-size: 0.8rem;
+    color: #94A3B8; /* Cor mais suave e discreta */
+    margin-top: 8px;
+}
+
+.developer-credit a {
+    color: #E2E8F0;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.developer-credit a:hover {
+    color: var(--gold);
+}
+
 /* Floating WhatsApp */
 #whatsapp-fab {
     position: fixed;
